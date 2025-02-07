@@ -1,8 +1,6 @@
 from flask import Flask, jsonify
-
 from git_exercise.users.users_api import users_api
 from git_exercise.users.users_gateway import UsersGateway
-
 
 def create_app() -> Flask:
     app = Flask(__name__)

@@ -1,9 +1,6 @@
-from flask import Blueprint, Flask
-from flask.testing import FlaskClient
+from flask import Flask
 
-
-def test_client(blueprint: Blueprint) -> FlaskClient:
+def test_client(blueprint):
     app = Flask(__name__)
-    app.config['TESTING'] = True
     app.register_blueprint(blueprint)
     return app.test_client()
